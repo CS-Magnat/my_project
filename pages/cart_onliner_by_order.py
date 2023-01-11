@@ -1,7 +1,10 @@
+import allure
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 from base.base_classs import Base
+from utilites.logger import Logger
+
 
 class Cart_onliner_by_order(Base):
     def __init__(self, driver):
@@ -150,44 +153,47 @@ class Cart_onliner_by_order(Base):
 
     """Методы, который непосредственно запускают последовательность выполнения комманд"""
     def oformleniye_zakaza(self):
-        # как я пытался получить перменные из сatalog_onliner_by_notebook.by и catalog_onliner_by_notebook_asus_g733zxkh036w.py , чтобы сделать итоговую проверку
-        # q = Catalog_onliner_by_notebook(self).get_price_igrovoy_noutbuk_ASUS_ROG_Strix_SCAR_17_G733ZX_KH036W()
-        # print("word_22222222222222222222 " + q)
-        # e = Igrovoy_noutbuk_ASUS_ROG_Strix_SCAR_17_G733ZX_KH036W(self).get_price_igrovoy_noutbuk_ASUS_ROG_Strix_SCAR_17_G733ZX_KH036W()
-        # print("word_333333333333333333333 " + e)
-        # self.assert_price(word_1 = self.get_total_price_igrovoy_noutbuk_ASUS_ROG_Strix_SCAR_17_G733ZX_KH036W(), word_2 = q, word_3 = e, result = "11350,00")
+        with allure.step("Oformleniye zakaza"):
+            Logger.add_start_step(method="oformleniye_zakaza")
+            # как я пытался получить перменные из сatalog_onliner_by_notebook.by и catalog_onliner_by_notebook_asus_g733zxkh036w.py , чтобы сделать итоговую проверку
+            # q = Catalog_onliner_by_notebook(self).get_price_igrovoy_noutbuk_ASUS_ROG_Strix_SCAR_17_G733ZX_KH036W()
+            # print("word_22222222222222222222 " + q)
+            # e = Igrovoy_noutbuk_ASUS_ROG_Strix_SCAR_17_G733ZX_KH036W(self).get_price_igrovoy_noutbuk_ASUS_ROG_Strix_SCAR_17_G733ZX_KH036W()
+            # print("word_333333333333333333333 " + e)
+            # self.assert_price(word_1 = self.get_total_price_igrovoy_noutbuk_ASUS_ROG_Strix_SCAR_17_G733ZX_KH036W(), word_2 = q, word_3 = e, result = "11350,00")
 
-        self.assert_price(self.get_total_price_igrovoy_noutbuk_ASUS_ROG_Strix_SCAR_17_G733ZX_KH036W(), "11350,00")
-        self.assert_url("https://cart.onliner.by/order") #если указать данную проверку перед проверкой цены, селениум подтягивает url предыдущей страницы,
-        #возможно перед тем, как распознавать url на странице, надо что-нибудь на ней сделать
+            self.assert_price(self.get_total_price_igrovoy_noutbuk_ASUS_ROG_Strix_SCAR_17_G733ZX_KH036W(), "11350,00")
+            self.assert_url("https://cart.onliner.by/order") #если указать данную проверку перед проверкой цены, селениум подтягивает url предыдущей страницы,
+            #возможно перед тем, как распознавать url на странице, надо что-нибудь на ней сделать
 
-        self.get_naselennyy_punkt()
-        self.send_naselennyy_punkt()
-        self.get_ulica()
-        self.send_ulica()
-        self.get_dom()
-        self.send_dom()
-        self.get_korpus()
-        self.send_korpus()
-        self.get_podyezd()
-        self.send_podyezd()
-        self.get_etazh()
-        self.send_etazh()
-        self.get_kvartira()
-        self.send_kvartira()
-        self.get_kommentariy_k_adresu()
-        self.send_kommentariy_k_adresu()
-        self.get_imya()
-        self.send_imya()
-        self.get_familiya()
-        self.send_familiya()
-        self.get_e_mail()
-        self.send_e_mail()
-        self.get_telefon()
-        self.send_telefon()
+            self.get_naselennyy_punkt()
+            self.send_naselennyy_punkt()
+            self.get_ulica()
+            self.send_ulica()
+            self.get_dom()
+            self.send_dom()
+            self.get_korpus()
+            self.send_korpus()
+            self.get_podyezd()
+            self.send_podyezd()
+            self.get_etazh()
+            self.send_etazh()
+            self.get_kvartira()
+            self.send_kvartira()
+            self.get_kommentariy_k_adresu()
+            self.send_kommentariy_k_adresu()
+            self.get_imya()
+            self.send_imya()
+            self.get_familiya()
+            self.send_familiya()
+            self.get_e_mail()
+            self.send_e_mail()
+            self.get_telefon()
+            self.send_telefon()
 
-        self.get_podtverdit_nomer()
-        self.click_podtverdit_nomer()
-        self.get_screenshot()
+            self.get_podtverdit_nomer()
+            self.click_podtverdit_nomer()
+            self.get_screenshot()
+            Logger.add_end_step(method="oformleniye_zakaza")
 
 

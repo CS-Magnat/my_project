@@ -1,7 +1,10 @@
+import allure
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 from base.base_classs import Base
+from utilites.logger import Logger
+
 
 class Onliner_by(Base):
     def __init__(self, driver):
@@ -25,6 +28,9 @@ class Onliner_by(Base):
 
     """Методы, который непосредственно запускают последовательность выполнения комманд"""
     def go_to_catalog(self):
-        self.driver.get(self.url)
-        self.get_catalog()
-        self.click_catalog()
+        with allure.step("Go to catalog"):
+            Logger.add_start_step(method="go_to_catalog")
+            self.driver.get(self.url)
+            self.get_catalog()
+            self.click_catalog()
+            Logger.add_end_step(method="go_to_catalog")

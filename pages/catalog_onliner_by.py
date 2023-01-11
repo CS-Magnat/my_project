@@ -1,7 +1,10 @@
+import allure
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 from base.base_classs import Base
+from utilites.logger import Logger
+
 
 class Catalog_onliner_by(Base):
     def __init__(self, driver):
@@ -51,11 +54,14 @@ class Catalog_onliner_by(Base):
 
     """Методы, который непосредственно запускают последовательность выполнения комманд"""
     def go_to_computers_and_networks(self):
-        self.get_computers_and_networks()
-        self.click_computers_and_networks()
-        self.get_noutbuki_kompyutery_monitory()
-        self.click_noutbuki_kompyutery_monitory()
-        self.get_igrovyye_noutbuki()
-        self.click_igrovyye_noutbuki()
+        with allure.step("Go to computers and networks"):
+            Logger.add_start_step(method="go_to_computers_and_networks")
+            self.get_computers_and_networks()
+            self.click_computers_and_networks()
+            self.get_noutbuki_kompyutery_monitory()
+            self.click_noutbuki_kompyutery_monitory()
+            self.get_igrovyye_noutbuki()
+            self.click_igrovyye_noutbuki()
+            Logger.add_end_step(method="go_to_computers_and_networks")
 
 

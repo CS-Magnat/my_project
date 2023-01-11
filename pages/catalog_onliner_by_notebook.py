@@ -1,7 +1,10 @@
+import allure
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 from base.base_classs import Base
+from utilites.logger import Logger
+
 
 class Catalog_onliner_by_notebook(Base):
     def __init__(self, driver):
@@ -85,25 +88,28 @@ class Catalog_onliner_by_notebook(Base):
 
     """Методы, который непосредственно запускают последовательность выполнения комманд"""
     def choice_of_laptop(self):
-        self.scroll() #не находит элемент, если не сместить страницу, хотя страница сама по себе не подгружается при скролле вниз, фильтр просто скрыт визуально за экраном
-        self.get_schema_filter_checkbox_asus()
-        self.click_schema_filter_checkbox_asus()
+        with allure.step("Сhoice of laptop"):
+            Logger.add_start_step(method="choice_of_laptop")
+            self.scroll() #не находит элемент, если не сместить страницу, хотя страница сама по себе не подгружается при скролле вниз, фильтр просто скрыт визуально за экраном
+            self.get_schema_filter_checkbox_asus()
+            self.click_schema_filter_checkbox_asus()
 
-        # self.hover_over_an_element() #попытка автонаведения экрана
+            # self.hover_over_an_element() #попытка автонаведения экрана
 
-        self.get_schema_filter_checkbox_2022()
-        self.click_schema_filter_checkbox_2022()
+            self.get_schema_filter_checkbox_2022()
+            self.click_schema_filter_checkbox_2022()
 
-        self.PAGE_DOWN() #скролл после одного использования пересает работать, экран может немног просто дернуться,
-        # пришлось юзать вот это, но если заюзать этот же метод в самом начале, перестает искать в фильтре асус)
+            self.PAGE_DOWN() #скролл после одного использования пересает работать, экран может немног просто дернуться,
+            # пришлось юзать вот это, но если заюзать этот же метод в самом начале, перестает искать в фильтре асус)
 
-        self.get_schema_filter_checkbox_intel_core_i9()
-        self.click_schema_filter_checkbox_intel_core_i9()
+            self.get_schema_filter_checkbox_intel_core_i9()
+            self.click_schema_filter_checkbox_intel_core_i9()
 
-        self.assert_price(self.get_price_igrovoy_noutbuk_ASUS_ROG_Strix_SCAR_17_G733ZX_KH036W(), "11350,00") #локатор выводит разные ценники
+            self.assert_price(self.get_price_igrovoy_noutbuk_ASUS_ROG_Strix_SCAR_17_G733ZX_KH036W(), "11350,00") #локатор выводит разные ценники
 
-        self.get_igrovoy_noutbuk_ASUS_ROG_Strix_SCAR_17_G733ZX_KH036W()
-        self.click_igrovoy_noutbuk_ASUS_ROG_Strix_SCAR_17_G733ZX_KH036W()
+            self.get_igrovoy_noutbuk_ASUS_ROG_Strix_SCAR_17_G733ZX_KH036W()
+            self.click_igrovoy_noutbuk_ASUS_ROG_Strix_SCAR_17_G733ZX_KH036W()
+            Logger.add_end_step(method="choice_of_laptop")
 
 
 

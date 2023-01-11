@@ -1,4 +1,5 @@
 import time
+import allure
 from selenium import webdriver
 
 from pages.cart_onliner_by_order import Cart_onliner_by_order
@@ -9,7 +10,8 @@ from pages.onliner_by import Onliner_by
 
 
 """Переход в каталог"""
-def test_checking_access_catalog(set_up, set_group):
+@allure.description("Test dymovoye testirovaniye dlya oformleniya zakaza")
+def test_dymovoye_testirovaniye_dlya_oformleniya_zakaza(set_up, set_group):
     driver = webdriver.Chrome(executable_path="C:\\Users\\qwerty\\PycharmProjects\\resource\\chromedriver.exe")
     driver.maximize_window()
 

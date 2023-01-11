@@ -1,7 +1,12 @@
+import allure
+
 from base.base_classs import Base
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
+
+from utilites.logger import Logger
+
 
 class Igrovoy_noutbuk_ASUS_ROG_Strix_SCAR_17_G733ZX_KH036W(Base):
     def __init__(self, driver):
@@ -34,7 +39,10 @@ class Igrovoy_noutbuk_ASUS_ROG_Strix_SCAR_17_G733ZX_KH036W(Base):
 
     """Методы, который непосредственно запускают последовательность выполнения комманд"""
     def buy_product(self):
-        self.assert_price(self.get_price_igrovoy_noutbuk_ASUS_ROG_Strix_SCAR_17_G733ZX_KH036W(), "11350,00")
-        self.get_buy_it_now()
-        self.click_buy_it_now()
+        with allure.step("Buy product"):
+            Logger.add_start_step(method="buy_product")
+            self.assert_price(self.get_price_igrovoy_noutbuk_ASUS_ROG_Strix_SCAR_17_G733ZX_KH036W(), "11350,00")
+            self.get_buy_it_now()
+            self.click_buy_it_now()
+            Logger.add_end_step(method="buy_product")
 
