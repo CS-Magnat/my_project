@@ -1,0 +1,50 @@
+
+-----
+Test: test_buy_products.py::test_dymovoye_testirovaniye_dlya_oformleniya_zakaza (call)
+Start time: 2023-01-11 18:03:51.342305
+Start name method: go_to_catalog
+
+End time: 2023-01-11 18:03:55.379118
+End name method: go_to_catalog
+
+-----
+
+-----
+Test: test_buy_products.py::test_dymovoye_testirovaniye_dlya_oformleniya_zakaza (call)
+Start time: 2023-01-11 18:03:55.380116
+Start name method: go_to_computers_and_networks
+
+End time: 2023-01-11 18:03:59.021646
+End name method: go_to_computers_and_networks
+
+-----
+
+-----
+Test: test_buy_products.py::test_dymovoye_testirovaniye_dlya_oformleniya_zakaza (call)
+Start time: 2023-01-11 18:03:59.021646
+Start name method: choice_of_laptop
+
+End time: 2023-01-11 18:04:04.999964
+End name method: choice_of_laptop
+
+-----
+
+-----
+Test: test_buy_products.py::test_dymovoye_testirovaniye_dlya_oformleniya_zakaza (call)
+Start time: 2023-01-11 18:04:05.000964
+Start name method: buy_product
+
+End time: 2023-01-11 18:04:05.920941
+End name method: buy_product
+
+-----
+
+-----
+Test: test_buy_products.py::test_dymovoye_testirovaniye_dlya_oformleniya_zakaza (call)
+Start time: 2023-01-11 18:04:05.920941
+Start name method: oformleniye_zakaza
+
+End time: 2023-01-11 18:04:10.794781
+End name method: oformleniye_zakaza
+
+-----
