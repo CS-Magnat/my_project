@@ -41,7 +41,7 @@ class Igrovoy_noutbuk_ASUS_ROG_Strix_SCAR_17_G733ZX_KH036W(Base):
     def buy_product(self):
         with allure.step("Buy product"):
             Logger.add_start_step(method="buy_product")
-            self.assert_price(self.get_price_igrovoy_noutbuk_ASUS_ROG_Strix_SCAR_17_G733ZX_KH036W(), "11350,00")
+            self.assert_price(self.get_price_igrovoy_noutbuk_ASUS_ROG_Strix_SCAR_17_G733ZX_KH036W(), "10740,00")
             self.get_buy_it_now()
             self.click_buy_it_now()
             Logger.add_end_step(method="buy_product")

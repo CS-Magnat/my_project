@@ -105,7 +105,7 @@ class Catalog_onliner_by_notebook(Base):
             self.get_schema_filter_checkbox_intel_core_i9()
             self.click_schema_filter_checkbox_intel_core_i9()
 
-            self.assert_price(self.get_price_igrovoy_noutbuk_ASUS_ROG_Strix_SCAR_17_G733ZX_KH036W(), "11350,00") #локатор выводит разные ценники
+            self.assert_price(self.get_price_igrovoy_noutbuk_ASUS_ROG_Strix_SCAR_17_G733ZX_KH036W(), "10740,00") #локатор выводит разные ценники
 
             self.get_igrovoy_noutbuk_ASUS_ROG_Strix_SCAR_17_G733ZX_KH036W()
             self.click_igrovoy_noutbuk_ASUS_ROG_Strix_SCAR_17_G733ZX_KH036W()

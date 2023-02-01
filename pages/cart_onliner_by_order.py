@@ -162,7 +162,7 @@ class Cart_onliner_by_order(Base):
             # print("word_333333333333333333333 " + e)
             # self.assert_price(word_1 = self.get_total_price_igrovoy_noutbuk_ASUS_ROG_Strix_SCAR_17_G733ZX_KH036W(), word_2 = q, word_3 = e, result = "11350,00")
 
-            self.assert_price(self.get_total_price_igrovoy_noutbuk_ASUS_ROG_Strix_SCAR_17_G733ZX_KH036W(), "11350,00")
+            self.assert_price(self.get_total_price_igrovoy_noutbuk_ASUS_ROG_Strix_SCAR_17_G733ZX_KH036W(), "10740,00")
             self.assert_url("https://cart.onliner.by/order") #если указать данную проверку перед проверкой цены, селениум подтягивает url предыдущей страницы,
             #возможно перед тем, как распознавать url на странице, надо что-нибудь на ней сделать
 

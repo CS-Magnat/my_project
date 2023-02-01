@@ -12,6 +12,8 @@ class Base():
         removing_spaces = value_word.replace(" ", "")  # удаляем пробелы
         delete_unnecessary = re.findall("([0-9]+[,]+[0-9]+)", removing_spaces)  # выводим в Массив только цифры и запятые
         price = "".join(delete_unnecessary)  # преобразуем Список в строку
+        print(price)
+        print(result)
         assert price == result
         print("Цена на странице верна")
 
