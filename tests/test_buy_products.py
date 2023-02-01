@@ -9,7 +9,7 @@ from pages.catalog_onliner_by_notebook_asus_g733zxkh036w import Igrovoy_noutbuk_
 from pages.onliner_by import Onliner_by
 
 
-"""Переход в каталог"""
+"""End to End test"""
 @allure.description("Test dymovoye testirovaniye dlya oformleniya zakaza")
 def test_dymovoye_testirovaniye_dlya_oformleniya_zakaza(set_up, set_group):
     driver = webdriver.Chrome(executable_path="C:\\Users\\qwerty\\PycharmProjects\\resource\\chromedriver.exe")

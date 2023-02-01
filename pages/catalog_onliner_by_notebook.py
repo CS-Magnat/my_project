@@ -78,14 +78,6 @@ class Catalog_onliner_by_notebook(Base):
         self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
         print("Страница была спущена в самый низ")
 
-    # хотел дополнительно исgjльзовать возможность перемещения экрана, через автонаведение, но у меня не получилось это сделать
-    # не получается праdbильно передавать/обращаться в переменным из функций
-    # def hover_over_an_element(self):
-    #     action = ActionChains(self.driver)
-    #     action.move_to_element(self.get_schema_filter_checkbox_2022).perform()
-    #     print("Экран визуально перемещен на фильтре 2022")
-
-
     """Методы, который непосредственно запускают последовательность выполнения комманд"""
     def choice_of_laptop(self):
         with allure.step("Сhoice of laptop"):
@@ -93,8 +85,6 @@ class Catalog_onliner_by_notebook(Base):
             self.scroll() #не находит элемент, если не сместить страницу, хотя страница сама по себе не подгружается при скролле вниз, фильтр просто скрыт визуально за экраном
             self.get_schema_filter_checkbox_asus()
             self.click_schema_filter_checkbox_asus()
-
-            # self.hover_over_an_element() #попытка автонаведения экрана
 
             self.get_schema_filter_checkbox_2022()
             self.click_schema_filter_checkbox_2022()

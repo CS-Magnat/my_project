@@ -155,12 +155,6 @@ class Cart_onliner_by_order(Base):
     def oformleniye_zakaza(self):
         with allure.step("Oformleniye zakaza"):
             Logger.add_start_step(method="oformleniye_zakaza")
-            # как я пытался получить перменные из сatalog_onliner_by_notebook.by и catalog_onliner_by_notebook_asus_g733zxkh036w.py , чтобы сделать итоговую проверку
-            # q = Catalog_onliner_by_notebook(self).get_price_igrovoy_noutbuk_ASUS_ROG_Strix_SCAR_17_G733ZX_KH036W()
-            # print("word_22222222222222222222 " + q)
-            # e = Igrovoy_noutbuk_ASUS_ROG_Strix_SCAR_17_G733ZX_KH036W(self).get_price_igrovoy_noutbuk_ASUS_ROG_Strix_SCAR_17_G733ZX_KH036W()
-            # print("word_333333333333333333333 " + e)
-            # self.assert_price(word_1 = self.get_total_price_igrovoy_noutbuk_ASUS_ROG_Strix_SCAR_17_G733ZX_KH036W(), word_2 = q, word_3 = e, result = "11350,00")
 
             self.assert_price(self.get_total_price_igrovoy_noutbuk_ASUS_ROG_Strix_SCAR_17_G733ZX_KH036W(), "10740,00")
             self.assert_url("https://cart.onliner.by/order") #если указать данную проверку перед проверкой цены, селениум подтягивает url предыдущей страницы,
