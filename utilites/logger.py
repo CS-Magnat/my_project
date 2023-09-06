@@ -1,7 +1,7 @@
 import datetime
 import os
 class Logger():
-    file_name = f"C:\\Users\\\qwerty\\PycharmProjects\\my_project\\logs\\log_" + str(datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")) + ".log"
+    file_name = f"C:\\Users\\Qwerty\\my_project\\test_results\\log_" + str(datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")) + ".log"
     @classmethod
     def write_log_to_file(cls, data: str):
         with open(cls.file_name, 'a', encoding='utf=8') as logger_file:

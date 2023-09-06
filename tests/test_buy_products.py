@@ -12,7 +12,7 @@ from pages.onliner_by import Onliner_by
 """End to End test"""
 @allure.description("Test dymovoye testirovaniye dlya oformleniya zakaza")
 def test_dymovoye_testirovaniye_dlya_oformleniya_zakaza(set_up, set_group):
-    driver = webdriver.Chrome(executable_path="C:\\Users\\qwerty\\PycharmProjects\\resource\\chromedriver.exe")
+    driver = webdriver.Chrome()
     driver.maximize_window()
 
     check_catalog = Onliner_by(driver)
@@ -32,6 +32,8 @@ def test_dymovoye_testirovaniye_dlya_oformleniya_zakaza(set_up, set_group):
 
     time.sleep(5)
 
+
+test_dymovoye_testirovaniye_dlya_oformleniya_zakaza("123", "123")
 
 
 
