@@ -1,0 +1,26 @@
+
+-----
+Test: None
+Start time: 2023-09-09 13:53:26.992577
+Start name method: go_to_catalog
+
+End time: 2023-09-09 13:53:29.813783
+End name method: go_to_catalog
+
+-----
+
+-----
+Test: None
+Start time: 2023-09-09 13:53:29.813783
+Start name method: go_to_computers_and_networks
+
+End time: 2023-09-09 13:53:31.043071
+End name method: go_to_computers_and_networks
+
+-----
+
+-----
+Test: None
+Start time: 2023-09-09 13:53:31.043071
+Start name method: choice_of_laptop
+
